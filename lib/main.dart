@@ -6,12 +6,7 @@ void main() async {
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
       .then((_) {
-    runApp(
-        // DevicePreview(
-        //   enabled: !kReleaseMode,
-        //   builder: (context) => YaqeesApp(), // Wrap your app
-        // ),
-        const qeesApp());
+    runApp(const qeesApp());
   });
 }
 
