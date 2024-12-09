@@ -30,4 +30,4 @@ jobs:
 
       # Step 5: Build APK for release
       - name: Build APK
-        run: flutter build apk
+        run: flutter build apk --release
