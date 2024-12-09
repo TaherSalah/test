@@ -1,0 +1,33 @@
+name: Flutter CI/CD
+
+on:
+  push:
+    branches:
+      - master  # Trigger the workflow only on pushes to the 'master' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code from repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Setup Flutter
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'stable'  # You can change this to a specific version if needed
+
+      # Step 3: Run flutter clean
+      - name: Flutter Clean
+        run: flutter clean
+
+      # Step 4: Get Flutter dependencies
+      - name: Flutter Pub Get
+        run: flutter pub get
+
+      # Step 5: Build APK for release
+      - name: Build APK
+        run: flutter build apk
