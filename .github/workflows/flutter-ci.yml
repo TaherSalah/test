@@ -16,7 +16,7 @@ jobs:
 
       # Step 2: Setup Flutter
       - name: Setup Flutter
-        uses: subosito/flufltter-action@v2
+        uses: subosito/fltter-action@v2
         with:
           flutter-version: '3.19.6'  # You can change this to a specific version if needed
 
