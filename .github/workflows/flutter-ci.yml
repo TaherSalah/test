@@ -31,3 +31,9 @@ jobs:
       # Step 5: Build APK for release
       - name: Build APK
         run: flutter build apk --release
+      # Step 6: Upload APK as artifact
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: flutter-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
